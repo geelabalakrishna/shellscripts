@@ -5,7 +5,7 @@ APACHE=$(ls -l | grep apache-maven | awk '{print $9}')
 tar vxfz $APACHE
 rm -rf $APACHE
 MAVEN_DIR=$(ls -ltr | grep apache-maven | awk '{print $9}')
-echo "export MAVEN_HOME=/opt/$MAVEN_DIR" >> $HOME/.bash_profile
+echo "export MAVEN_HOME=/tmp/$MAVEN_DIR" >> $HOME/.bash_profile
 echo 'export PATH=$MAVEN_HOME/bin:$PATH' >> $HOME/.bash_profile
 source $HOME/.bash_profile
 echo "maven install sucessfully"
